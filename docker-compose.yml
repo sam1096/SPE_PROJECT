@@ -23,7 +23,7 @@ services:
       - my-db:/var/lib/mysql
 
   web:
-    image: spe001:latest
+    image: TechPublishing-0.0.1-SNAPSHOT:latest
     restart: always
     ports:
       - "10001:10001"
