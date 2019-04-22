@@ -1,13 +1,9 @@
 package com.example.demo.Respository;
 
-import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.model.Admin;
+import com.example.demo.model.AdminArea;
 
+public interface AdminAreaRepository extends CrudRepository<AdminArea, Integer>{
 
-public interface AdminRepository extends CrudRepository<Admin, Integer>{
-
-public List<Admin> findByAdminname(String adminname);
 }
