@@ -19,7 +19,7 @@ public class TechPublishingApplicationTests {
 	@Autowired
 	ApplicationContext context;
 
-	@Test
+	//@Test
 		public void validateUser() {
 			UserService service = context.getBean(UserService.class);
 			String username="sam";
@@ -27,7 +27,7 @@ public class TechPublishingApplicationTests {
 			User user = service.validateUser(username, pass);
 			System.out.println(user);
 		}
-	@Test
+	//@Test
 	public void validateAdmin() {
 		AdminService service = context.getBean(AdminService.class);
 		String adminname="root";
