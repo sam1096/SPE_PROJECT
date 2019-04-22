@@ -1,4 +1,5 @@
-
+CREATE DATABASE IF NOT EXISTS Tech;
+GRANT ALL PRIVILEDGES on Tech.* TO 'newuser'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
 use Tech;
 insert into areainterest values('PRO001',"Programming");
 
