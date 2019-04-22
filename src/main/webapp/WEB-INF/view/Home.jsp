@@ -48,24 +48,22 @@
       
     </div>
   </div>
+   <c:set var="err" value= "Invalid Username or Password" /> 
+<c:set var="error" value="${error}" /> 
+ <c:choose> 
+   <c:when test="${error==err}">
+   <script>
   
-  		<c:set var="error" value="${error}" /> 
-  		<c:set var="err" value="Invalid username or password" /> 
-<c:choose>
-    <c:when test="${error==err}">
-    <script>
-//     alert("Invalid Username or Password!");
-    $(window).on('load',function(){
-        $('#errorModal').modal('show');
-    });
-    </script>
-    </c:when>
-     <c:when test="${error==null}">
-     </c:when>
-    <c:otherwise>
-   
-    </c:otherwise>      
-</c:choose>
+   $('#errorModal').modal();
+     </script> 
+    </c:when> 
+     <c:otherwise> 
+     <script>
+   $('#errorModal').modal("hide");
+     
+     </script>
+     </c:otherwise>    
+ </c:choose> 
 <!-- -----------------Displaying error-------------------------------- -->
 
 <div>
@@ -281,3 +279,4 @@ $(document).ready(function(){
 
 </body>
 </html>
+
