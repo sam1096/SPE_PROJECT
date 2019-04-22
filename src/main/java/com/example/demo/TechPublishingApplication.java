@@ -45,6 +45,8 @@ public class TechPublishingApplication  implements CommandLineRunner {
 	
 		@Override
 	public void run(String... args) throws Exception {
+		adminRepository.deleteAll();
+   		 adminRepository.flush();
 		Admin ad = new Admin();
 		ad.setName("root");
 		ad.setPassword("root");
@@ -61,7 +63,8 @@ public class TechPublishingApplication  implements CommandLineRunner {
 		ad1.setPhoneNo("9718234901");
 		adminRepository.save(ad1);
 		
-		
+		areainterestRepository.deleteAll();
+   		 areainterestRepository.flush();
 			AreaInterest a1=new AreaInterest();
 			a1.setAreaid("PRO001");
 			a1.setAreaname("Programming");
@@ -107,6 +110,8 @@ public class TechPublishingApplication  implements CommandLineRunner {
 			a11.setAreaname("Human Values and Ethics");
 			areainterestRepository.save(a11);
 			
+		adminareaRepository.deleteAll();
+    		adminareaRepository.flush();
 			AdminArea ar1=new AdminArea();
 			ar1.setId(1);
 			ar1.setAdminname("admin");
