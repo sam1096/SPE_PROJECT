@@ -37,7 +37,16 @@ public class TechPublishingApplication  implements CommandLineRunner {
 	AreaInterestRepository areainterestRepository;
 	@Autowired
 	AdminAreaRepository adminareaRepository;
+	@Autowired
+	private final ArticleRepository articleRepository;
 	
+	@Autowired
+	private final UserAreaRepository userareaRepository;
+	
+	@Autowired
+	private final CommentRepository commentRepo;
+	@Autowired
+	private final RatingRepository ratingRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(TechPublishingApplication.class, args);
@@ -46,6 +55,11 @@ public class TechPublishingApplication  implements CommandLineRunner {
 		@Override
 	public void run(String... args) throws Exception {
 		adminRepository.deleteAll();
+		userRepository.deleteAll();
+		userareaRepository.deleteAll();
+		 articleRepository.deleteAll();
+		commentRepo.deleteAll();
+		ratingRepository.deleteAll();
  
 		Admin ad = new Admin();
 		ad.setName("root");
@@ -83,8 +97,9 @@ public class TechPublishingApplication  implements CommandLineRunner {
 			areainterestRepository.save(a4);
 			AreaInterest a5=new AreaInterest();
 			a5.setAreaid("CS0005");
-			areainterestRepository.save(a5);
 			a5.setAreaname("Chemical Science");
+			areainterestRepository.save(a5);
+			
 			AreaInterest a6=new AreaInterest();
 			a6.setAreaid("CIV006");
 			a6.setAreaname("Civil Engineering");
