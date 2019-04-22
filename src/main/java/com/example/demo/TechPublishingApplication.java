@@ -38,15 +38,15 @@ public class TechPublishingApplication  implements CommandLineRunner {
 	@Autowired
 	AdminAreaRepository adminareaRepository;
 	@Autowired
-	private final ArticleRepository articleRepository;
+	 ArticleRepository articleRepository;
 	
 	@Autowired
-	private final UserAreaRepository userareaRepository;
+	UserAreaRepository userareaRepository;
 	
 	@Autowired
-	private final CommentRepository commentRepo;
+	CommentRepository commentRepo;
 	@Autowired
-	private final RatingRepository ratingRepository;
+	 RatingRepository ratingRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(TechPublishingApplication.class, args);
