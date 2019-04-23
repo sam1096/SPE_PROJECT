@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.example.demo.Respository.UserRepository;
 import com.example.demo.model.Admin;
 import com.example.demo.model.User;
 import com.example.demo.services.AdminService;
@@ -18,7 +19,21 @@ public class TechPublishingApplicationTests {
 
 	@Autowired
 	ApplicationContext context;
-
+	@Test
+	public void saveMyUser() {	
+		UserService service = context.getBean(UserService.class);
+		User user1=new User();
+		user1.setUsername("sam");
+		user1.setFirstname("Samridhi");
+		user1.setLastname("Kundaliya");
+		user1.setAge(22);
+		user1.setPassword("123456");
+		user1.setEmail("ridhisam1096@gmail.com");
+		service.saveMyUser(user1);
+		System.out.println("user saved");
+		
+	}
+	
 	@Test
 		public void validateUser() {
 			UserService service = context.getBean(UserService.class);
