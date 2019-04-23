@@ -59,11 +59,9 @@ public class TechPublishingApplication  implements CommandLineRunner {
 		@Override
 	public void run(String... args) throws Exception {
 		adminRepository.deleteAll();
-		userRepository.deleteAll();
-		userareaRepository.deleteAll();
-		 articleRepository.deleteAll();
-		commentRepo.deleteAll();
-		ratingRepository.deleteAll();
+		
+	
+		
  
 		Admin ad = new Admin();
 		ad.setName("root");
