@@ -23,9 +23,9 @@ public class TechPublishingApplicationTests {
 	public void saveMyUser() {	
 		UserService service = context.getBean(UserService.class);
 		User user1=new User();
-		user1.setUsername("sam");
-		user1.setFirstname("Samridhi");
-		user1.setLastname("Kundaliya");
+		user1.setUsername("user");
+		user1.setFirstname("James");
+		user1.setLastname("Bond");
 		user1.setAge(22);
 		user1.setPassword("123456");
 		user1.setEmail("ridhisam1096@gmail.com");
@@ -34,7 +34,7 @@ public class TechPublishingApplicationTests {
 		
 	}
 	
-	@Test
+	//@Test
 		public void validateUser() {
 			UserService service = context.getBean(UserService.class);
 			String username="sam";
