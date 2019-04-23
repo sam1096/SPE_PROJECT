@@ -15,10 +15,7 @@ import com.example.demo.Respository.AdminAreaRepository;
 import com.example.demo.Respository.AdminRepository;
 import com.example.demo.Respository.AreaInterestRepository;
 import com.example.demo.Respository.UserRepository;
-import com.example.demo.Respository.ArticleRepository;
-import com.example.demo.Respository.UserAreaRepository;
-import com.example.demo.Respository.CommentRepository;
-import com.example.demo.Respository.RatingRepository;
+
 import com.example.demo.model.Admin;
 import com.example.demo.model.AdminArea;
 import com.example.demo.model.AreaInterest;
@@ -41,16 +38,7 @@ public class TechPublishingApplication  implements CommandLineRunner {
 	AreaInterestRepository areainterestRepository;
 	@Autowired
 	AdminAreaRepository adminareaRepository;
-	@Autowired
-	 ArticleRepository articleRepository;
 	
-	@Autowired
-	UserAreaRepository userareaRepository;
-	
-	@Autowired
-	CommentRepository commentRepo;
-	@Autowired
-	 RatingRepository ratingRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(TechPublishingApplication.class, args);
@@ -59,11 +47,7 @@ public class TechPublishingApplication  implements CommandLineRunner {
 		@Override
 	public void run(String... args) throws Exception {
 		adminRepository.deleteAll();
-		userRepository.deleteAll();
-		userareaRepository.deleteAll();
-		 articleRepository.deleteAll();
-		commentRepo.deleteAll();
-		ratingRepository.deleteAll();
+		
  
 		Admin ad = new Admin();
 		ad.setName("root");
