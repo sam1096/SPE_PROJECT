@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Table(name="admin")
 public class Admin implements Serializable{
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="adminid")
 	private int adminid;
 	@Column(name="name")
