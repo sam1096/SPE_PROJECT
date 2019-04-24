@@ -232,7 +232,7 @@
   
 </nav>
 <div  id="text" >
-<h1 style="color:white;"><b>Welcome to Tech Publishing Platform!!</b></h1 >
+<h1 style="color:white;"><b>Welcome !</b></h1 >
 <div style="margin-left:55px;">
 <h2 style="color:yellow">Create. </h2><h2 style="color:aqua">Explore. </h2><h2 style="color:crimson">Contribute. </h2>
 </div>
