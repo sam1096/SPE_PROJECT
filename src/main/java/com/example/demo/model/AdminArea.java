@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="adminarea")
 public class AdminArea {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id")
 	private int id;
 	@Column(name="adminname")
