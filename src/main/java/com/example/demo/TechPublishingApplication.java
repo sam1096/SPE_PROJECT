@@ -65,6 +65,14 @@ public class TechPublishingApplication  implements CommandLineRunner {
 		ad1.setPhoneNo("9718234901");
 		adminRepository.save(ad1);
 		
+		Admin ad2 = new Admin();
+		ad2.setName("divya");
+		ad2.setPassword("divya");
+		ad2.setAdminname("divya");
+		ad2.setEmail("divya@gmail.com");
+		ad2.setPhoneNo("9718629845");
+		adminRepository.save(ad2);
+		
 		areainterestRepository.deleteAll();
    		 
 			AreaInterest a1=new AreaInterest();
@@ -154,8 +162,43 @@ public class TechPublishingApplication  implements CommandLineRunner {
 			ar8.setId(8);
 			ar8.setAdminname("root");
 			ar8.setAreaid("ART007");
-			adminareaRepository.save(ar8);
+			
+			
+			AdminArea ar9=new AdminArea();
+			ar9.setId(9);
+			ar9.setAdminname("divya");
+			ar9.setAreaid("BIO008");
+			adminareaRepository.save(ar9);
+			
+			AdminArea ar10=new AdminArea();
+			ar10.setId(10);
+			ar10.setAdminname("divya");
+			ar10.setAreaid("CIV006");
+			adminareaRepository.save(ar10);
+			
+			AdminArea ar11=new AdminArea();
+			ar11.setId(11);
+			ar11.setAdminname("divya");
+			ar11.setAreaid("PRO001");
+			adminareaRepository.save(ar11);
+			
+			AdminArea ar12=new AdminArea();
+			ar12.setId(12);
+			ar12.setAdminname("divya");
+			ar12.setAreaid("CS0005");
+			adminareaRepository.save(ar12);
+			
+			AdminArea ar13=new AdminArea();
+			ar13.setId(13);
+			ar13.setAdminname("divya");
+			ar13.setAreaid("MUL002");
+			adminareaRepository.save(ar13);
+			
+			AdminArea ar14=new AdminArea();
+			ar14.setId(14);
+			ar14.setAdminname("divya");
+			ar14.setAreaid("PHY009");
+			adminareaRepository.save(ar14);
 	}
 
 }
-
